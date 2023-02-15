@@ -11,7 +11,7 @@
         <!--Добавить день рождения-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirthdatTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddBirthdayViewController" customModule="BirthdatTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,9 +90,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Добавить день рождения" id="KSt-rY-f0R">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OWR-en-CQj"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="VD0-76-tjA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OWR-en-CQj">
+                            <connections>
+                                <action selector="cancelTapped:" destination="BYZ-38-t0r" id="kIy-jc-I9I"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="VD0-76-tjA">
+                            <connections>
+                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="UCO-hg-G9v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="LastNameTextField" destination="Bcx-xZ-feH" id="NW1-UW-hO9"/>
+                        <outlet property="NameTextField" destination="rrB-Yz-uz9" id="5GZ-QY-Ccn"/>
+                        <outlet property="birthdatePicker" destination="YUS-Ij-bZv" id="7CT-cu-rTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
