@@ -6,12 +6,17 @@
 //
 
 import UIKit
+protocol AddBirthdayViewControllerDelegate{
+    func addBirthdayViewController(_addBirthdayViewController:AddBirthdayViewController, didAddBirthday birthday:Birthday)
+}
 
 class AddBirthdayViewController: UIViewController {
 
     @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var LastNameTextField: UITextField!
     @IBOutlet weak var birthdatePicker: UIDatePicker!
+    var delegate: AddBirthdayViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         birthdatePicker.maximumDate = Date()
@@ -23,10 +28,8 @@ class AddBirthdayViewController: UIViewController {
         let birthdate = birthdatePicker.date
         let newBirthday = Birthday(firstName: firstName, lastName: lastName, birthdate: birthdate)
         
-        print("Создана новая дата рождения")
-        print("Имя \(newBirthday.firstName)")
-        print("Фамилия \(newBirthday.lastName)")
-        print("День рождения \(newBirthday.birthdate)")
+       delegate?.addBirthdayViewController(_addBirthdayViewController: self, didAddBirthday: newBirthday)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
