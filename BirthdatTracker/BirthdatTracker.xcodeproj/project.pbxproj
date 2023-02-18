@@ -14,7 +14,6 @@
 		84839883299D8017004EF38D /* BirthdatTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84839881299D8017004EF38D /* BirthdatTracker.xcdatamodeld */; };
 		84839885299D801B004EF38D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84839884299D801B004EF38D /* Assets.xcassets */; };
 		84839888299D801B004EF38D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84839886299D801B004EF38D /* LaunchScreen.storyboard */; };
-		84839890299D8D95004EF38D /* Birthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483988F299D8D95004EF38D /* Birthday.swift */; };
 		84839892299EC443004EF38D /* BirthdaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84839891299EC443004EF38D /* BirthdaysTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		84839884299D801B004EF38D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84839887299D801B004EF38D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84839889299D801B004EF38D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8483988F299D8D95004EF38D /* Birthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday.swift; sourceTree = "<group>"; };
 		84839891299EC443004EF38D /* BirthdaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +69,6 @@
 				84839886299D801B004EF38D /* LaunchScreen.storyboard */,
 				84839889299D801B004EF38D /* Info.plist */,
 				84839881299D8017004EF38D /* BirthdatTracker.xcdatamodeld */,
-				8483988F299D8D95004EF38D /* Birthday.swift */,
 			);
 			path = BirthdatTracker;
 			sourceTree = "<group>";
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84839892299EC443004EF38D /* BirthdaysTableViewController.swift in Sources */,
-				84839890299D8D95004EF38D /* Birthday.swift in Sources */,
 				8483987D299D8017004EF38D /* AddBirthdayViewController.swift in Sources */,
 				84839879299D8017004EF38D /* AppDelegate.swift in Sources */,
 				84839883299D8017004EF38D /* BirthdatTracker.xcdatamodeld in Sources */,
