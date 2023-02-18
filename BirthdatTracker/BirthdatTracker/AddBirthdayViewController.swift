@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 //protocol AddBirthdayViewControllerDelegate{
 //    func addBirthdayViewController(_addBirthdayViewController:AddBirthdayViewController, didAddBirthday birthday:Birthday)
 //}
@@ -40,6 +41,19 @@ class AddBirthdayViewController: UIViewController {
         }
         do {
             try context.save()
+            let message = "Сегодня \(firstName) \(lastName) празднует день рождения"
+            let content = UNMutableNotificationContent()
+            content.body = message
+            content.sound = UNNotificationSound.default
+            var dateComponents = Calendar.current.dateComponents([.month, .day], from: birthdate)
+            dateComponents.hour = 13
+            dateComponents.minute = 45
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            if let indentifier = newBirthday.birthdayid {
+                let request = UNNotificationRequest(identifier: indentifier, content: content, trigger: trigger)
+                let center = UNUserNotificationCenter.current()
+                center.add(request, withCompletionHandler: nil)
+            }
         } catch let error{
             print("не удалось сохранить из-за ошики \(error).")
         }
